@@ -1,0 +1,113 @@
+.live-class {
+    width: 270px;
+    height: 270px;
+    border-radius: 12px;
+    background: white;
+}
+
+.banner {
+    height: 111px;
+    padding-top: 15px;
+    border-radius: 12px 12px 0 0;
+}
+
+.banner-picture {
+    background: url('../../../public/banner.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    left: 80px;
+}
+
+.label {}
+
+.label-tag {
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    height: 20px;
+    font-family: Mulish;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+    display: flex;
+    gap: 4px;
+    padding: 4px 6px;
+    position: relative;
+    top: -30px;
+    left: 14.5px
+}
+
+.five-dots {
+    position: relative;
+    top: -58px;
+    left: 210px;
+    width: 36px;
+    height: 36px;
+}
+
+.card-description {
+    margin: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: left;
+    font-family: Mulish;
+    border-width: 0 0 1px 0;
+    gap: 4px;
+}
+
+.class-type {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.class-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #313848;
+}
+
+.teacher-name {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #313848;
+    padding-top: 6px;
+}
+
+.card-footer {
+    display: flex;
+    padding: 0 10px 10px 10px;
+}
+
+.card-time {
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    font-family: Mulish;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: left;
+    color: #313848;
+}
+
+.card-button {
+    margin-left: 30px;
+    border-color: #313848 30%;
+    border-width: 1.5px;
+    border-radius: 8px;
+    width: 80px;
+    height: 32px;
+    font-family: Mulish;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #313848;
+}

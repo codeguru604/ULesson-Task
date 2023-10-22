@@ -1,0 +1,207 @@
+
+
+.user-btn {
+    width: 43px;
+    height: 43px;
+    background-image: url('../../../public/user-icon.svg');
+}
+
+
+
+.video-lesson {
+    padding: 50px 0;
+    font-family: "M PLUS Rounded 1c";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0px;
+    width: 100%;
+}
+
+
+
+
+.homework-help {
+    align-items: center;
+    padding-top: 24px;
+    border-radius: 8px;
+    display: flex;
+    background: white;
+    width: 100%;
+}
+
+.homework-practice {
+    align-items: center;
+    padding: 0px 60.5px;
+    width: 50%;
+    height: 240px;
+}
+
+.homework-label {
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #EA7052;
+    padding: 10px 0px;
+}
+
+.homework-title {
+    font-family: "M PLUS Rounded 1c";
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding: 10px 0px;
+    color: #313848;
+}
+
+.homework-description {
+    font-family: Mulish;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: left;
+    color: #313848;
+    padding: 10px 0px;
+}
+
+.homework-button {
+    width: 185px;
+    height: 48px;
+    top: 206px;
+    left: 60.5px;
+    border-radius: 8px;
+    background-color: #68BC98;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 0px;
+}
+
+.join-live-class {
+    width: 100%;
+    ;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.join-live-container {
+    display: inline-flex;
+    transition: transform 0.5s;
+    will-change: transform;
+}
+
+.carousel {
+    display: inline-flex;
+    gap: 24px;
+    transition: transform 0.5s;
+}
+
+.join-live-top {
+    height: 36px;
+}
+
+.join-button {
+    display: flex;
+    float: left;
+    gap: 10px;
+}
+
+.join-title {
+    font-family: "M PLUS Rounded 1c";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #313848;
+}
+
+.join-all-button {
+    font-family: "M PLUS Rounded 1c";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    color: #7B7FDA;
+
+}
+
+.join-carousel-button {
+    float: right;
+}
+
+.join-prev {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.join-next {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+}
+
+.take-mock-exam {
+    width: 100%;
+    margin: 40px auto;
+}
+
+.take-exam-container {
+    display: flex;
+    gap: 24px;
+}
+
+.quiz-content {
+    background-image: url("../../../public//quiz-content.svg");
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.quiz-button {
+    margin: 180px auto;
+    width: 186px;
+    height: 49px;
+    padding: 9px 26.74px 8.07px 26px;
+    border-radius: 25px;
+    background-color: white;
+    color: #313848;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-family: "M PLUS Rounded 1c";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: 0px 3.7063188552856445px 0px 0px #323592;
+}
+
+.help-frame {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    background: white;
+    width: 100%;
+    height: 320px;
+    margin: 50px 0;
+}
