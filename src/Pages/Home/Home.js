@@ -109,15 +109,15 @@ const Home = () => {
                         })}
                     </div>
                 </div>
-                <div className="homework-help">
-                    <div className="homework-practice">
+                <div className="homework-help grid sm:grid-cols-1 lg:grid-cols-2">
+                    <div className="homework-practice w-[400px]">
                         <p className="homework-label">PRACTICE EXAM</p>
                         <h2 className="homework-title">Ready to test your knowledge?</h2>
                         <p className="homework-description">Take practice exams to prepare for upcoming exams. Practice makes perfect grades!</p>
 
                         <button className="homework-button">START PRACTICE</button>
                     </div>
-                    <div className='homework-img'>
+                    <div className='homework-img w-[400px]'>
                         <img src="/homework-exam.svg" alt="..." />
                     </div>
                 </div>
@@ -228,15 +228,15 @@ const Home = () => {
                         PLAY QUIZ
                     </button>
                 </div>
-                <div className="help-frame">
-                    <div className="homework-practice">
+                <div className="help-frame grid sm:grid-cols-1 lg:grid-cols-2">
+                    <div className="homework-practice w-[400px]">
                         <p className="homework-label">HOMEWORK HELP</p>
                         <h2 className="homework-title">Get Homework help from experienced tutors</h2>
                         <p className="homework-description">Ask a question and get detailed explanations to difficult questions</p>
 
                         <button className="homework-button">ASK A QUESTION</button>
                     </div>
-                    <div>
+                    <div className="homework-img w-[400px]">
                         <img src="/help-frame.svg" alt="..." />
                     </div>
                 </div>
