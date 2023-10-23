@@ -4,12 +4,11 @@ import ChapterModal from '../ChapterModal/ChapterModal';
 const ChapterCard = (props) => {
     const { chapterNumber, chapterName } = props;
     const [showModal, setShowModal] = useState(false);
-
     const toggleModal = () => {
         setShowModal(!showModal);
     }
-
     const url = `/Chapter ${parseInt(chapterNumber) % 5 !== 0 ? parseInt(chapterNumber) % 5 : 5}.svg`;
+
     return (
         <div>
             <div className='bg-white p-4 w-[240px] h-[252px] grid font-["M_PLUS_Rounded_1c"] tracking-[0.4px] items-center text-center' onClick={toggleModal}>

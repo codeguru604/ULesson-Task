@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
-
-const videoList = [
-    'https://drive.google.com/uc?export=download&id=1R8UGFePHQCMZA6aLlnp4kGWjUCWqjpTu',
-    'https://drive.google.com/uc?export=download&id=1jgwX8_gwGuwg5OJ_J0Nrmql5eL-ierpq',
-    'https://drive.google.com/uc?export=download&id=1EnRRKw7aiNnij_TdOPBsFcY_D7Af78KV'
-];
+import { VIDEO_LIST } from '../../Utils/constants';
 
 const ChapterModal = (props) => {
     const { showModal, onClose } = props;
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [videoState, setVideoState] = useState({
-        videoSrc: null,
+        videoName: null,
+        videoUrl: null,
         currentTime: 0,
         isPlaying: false,
     });
@@ -29,31 +25,30 @@ const ChapterModal = (props) => {
     }, [showModal]);
 
     const handleClose = (e) => {
-        // Save the video playback state to localStorage
-        if (selectedVideo) {
-            const stateToStore = { ...videoState, isPlaying: false };
-            localStorage.setItem('videoPlayerState', JSON.stringify(stateToStore));
-        }
+        localStorage.removeItem('videoPlayerState');
         onClose && onClose();
     };
 
     const handleVideoSelection = (videoSrc) => {
         setSelectedVideo(videoSrc);
         setVideoState({
-            videoSrc: videoSrc,
+            videoName: videoSrc.name,
+            videoUrl: videoSrc.url,
             currentTime: 0,
             isPlaying: true,
         });
     };
 
     const returnMenu = () => {
+        if (!selectedVideo) {
+            handleClose();
+        }
         if (selectedVideo) {
             const stateToStore = { ...videoState, isPlaying: false };
             localStorage.setItem('videoPlayerState', JSON.stringify(stateToStore));
         }
         setSelectedVideo(null);
     }
-
 
     return (
         <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -66,27 +61,34 @@ const ChapterModal = (props) => {
                                 <div className='prev' onClick={returnMenu}>
                                     <div className='p-4 pl-12'>
                                     <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.10986 11.21L0.999863 6.32L6.10986 1" stroke="#313848" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round" />
-                                            <path d="M17.0005 6L1.00049 6" stroke="#313848" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round" />
+                                            <path d="M6.10986 11.21L0.999863 6.32L6.10986 1" stroke="#313848" strokeWidth="1.5" strokeMiterlimit="10" strokeLinejoin="round" />
+                                            <path d="M17.0005 6L1.00049 6" stroke="#313848" strokeWidth="1.5" strokeMiterlimit="10" strokeLinejoin="round" />
                                         </svg>
                                     </div>
                                 </div>
-                                <div className='modal-title'>
-                                    <p>VIDEO</p>
-                                    {selectedVideo ? (
-                                        <VideoPlayer videoSrc={selectedVideo} currentTime={0} isPlaying={true} />
-                                    ) : (
-                                        <div>
-                                            <p>Select a video:</p>
-                                            <ul>
-                                                {videoList.map((videoSrc, index) => (
-                                                    <li key={index} onClick={() => handleVideoSelection(videoSrc)}>
-                                                        <span>{videoSrc}</span> {/* Display the video title or other information */}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
+                                <div className='grid p-2'>
+                                    <div>
+                                        <p className='font-["M_PLUS_Rounded_1c"] text-[16px] font-bold opacity-50'>Chapter 1</p>
+                                        <p className='font-["M_PLUS_Rounded_1c"] text-[18px] font-bold'>Properties of Plane shapes</p>
+                                        <p className='font-["M_PLUS_Rounded_1c"] text-[14px] font-semibold opacity-25'>76 Lessons</p>
+                                    </div>
+                                    <div className='modal-title pt-4'>
+                                        {selectedVideo ? (
+                                            <VideoPlayer videoSrc={selectedVideo.url} currentTime={0} isPlaying={true} />
+                                        ) : (
+                                            <div>
+                                                <p className='font-["M_PLUS_Rounded_1c"] text-[18px] font-bold'>Triangles and polygons</p>
+                                                <ul>
+                                                    {VIDEO_LIST.map((videoSrc, index) => (
+                                                        <li className='flex gap-6 items-center' key={index} onClick={() => handleVideoSelection(videoSrc)}>
+                                                            <img src={`/video-preview-${index}.svg`} alt='svg'></img>
+                                                            <span className='font-["M_PLUS_Rounded_1c"] text-[16px] font-semibold'>{videoSrc.name}</span> 
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>

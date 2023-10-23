@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Lesson = (props) => { 
     const {lessonType} = props;
     const url = `/${lessonType}.svg`;
